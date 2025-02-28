@@ -1,0 +1,14 @@
+<%- include("header") -%>
+    <h1><%= kindOfDay %></h1>
+    <ul>
+       <% for(var i=0;i<newListItems.length;i++){ %>
+            <li><input type="checkbox">
+                <span><%= newListItems[i] %></span></li>
+       <% } %>
+        
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="newItem" autocomplete="off" placeholder="Enter a task...">
+        <button type="submit" name="button"> Add </button>
+    </form>
+    <%- include("footer") -%>
